@@ -49,12 +49,13 @@ body{
     grid-template-columns: repeat(3,1fr);
     padding: 17px 35px;
     align-items: center;
+    grid-gap: 5px;
 }
 .body{
     padding: 0 30px;
 }
 .body .row{
-    padding: 13px;
+    padding: 10px;
 }
 .footer{
     margin-top: 5px;
@@ -79,4 +80,19 @@ body{
     border: 1px solid #D5D5D5;
     border-radius: 5px;
     text-align: center;
+}
+
+@media (max-width:776px){
+    .input-box input{
+        width: 100%;
+    }
+    .body {
+        padding: 0 10px;
+    }
+    .footer{
+        grid-template-columns: 1fr 1fr;
+    }
+    .footer p:first-child{
+        grid-column-start: 1;
+    }
 }
