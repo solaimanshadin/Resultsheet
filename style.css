@@ -6,17 +6,17 @@ body{
     color: #4D4D4D;
     background-image: url("images/bg-image.png");
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     font-family: 'Roboto', sans-serif;
     display: flex;
     height: 100vh;
+    justify-content: center;
     align-items: center;
 }
-
 .container{
-    align-items: center;
-    width: 776px;
-    margin: 0 auto;
+    width: 100%;
+    max-width: 776px;
 }
 .title{
     text-align: center;
@@ -35,26 +35,48 @@ body{
     background: linear-gradient(178.1deg, #446DFF -15.4%, #2811B5 124.63%);
     border-radius: 10px;
     color: #fff;
+    font-size: 16px;
     font-weight: bold;
+    text-align: center;
+}
+.header span:first-of-type{
+    text-align: left;
 }
 .header,
 .footer,
 .body .row{
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
     padding: 17px 35px;
-    text-align: center;
+    align-items: center;
+}
+.body{
+    padding: 0 30px;
+}
+.body .row{
+    padding: 13px;
 }
 .footer{
+    margin-top: 5px;
     background: #F4F7FC;
     border-radius: 10px;
 }
-input{
+.footer p:first-child{
+    grid-column-start: 2;
+}
+.input-box{
+    display: flex;
+    justify-content: center;
+}
+.input-box:nth-child(odd){
+    justify-content: flex-end;
+}
+.input-box input{
     width: 103px;
     height: 31px;
+    display: block;
     background: #F7F7F7;
     border: 1px solid #D5D5D5;
-    box-sizing: border-box;
     border-radius: 5px;
     text-align: center;
 }
